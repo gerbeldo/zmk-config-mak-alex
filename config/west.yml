@@ -6,12 +6,9 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: duanexavierbondad
       url-base: https://github.com/duanexavierbondad
-    - name: rolio
-      url-base: https://github.com/Townk
-    - name: m165437
-      url-base: https://github.com/M165437
-    - name: totem
-      url-base: https://github.com/GEIGEIGEIST
+    - name: gerbeldo
+      url-base: https://github.com/gerbeldo
+
   projects:
     - name: zephyr
       remote: zmkfirmware
@@ -45,18 +42,8 @@ manifest:
     - name: zmk-tri-state
       remote: duanexavierbondad
       revision: main
-    - name: zmk-rolio-shield
-      remote: rolio
-      revision: develop
-      clone-depth: 1
-      path: .west/repos/zmk-rolio-shield
-    - name: nice-view-gem
-      remote: m165437
+    - name: flake-zmk-module
+      remote: gerbeldo
       revision: main
-    - name: zmk-config-totem
-      remote: totem
-      revision: master
-      clone-depth: 1
-      path: ./boards/shields/totem
   self:
     path: config
