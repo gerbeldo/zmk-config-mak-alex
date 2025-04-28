@@ -139,18 +139,6 @@
 // This macro should NOT be used outside this file!
 #define __NUM_REVERSE(_number, _symbol)  DEFINE_SHIFT_KEY(kp_r ## _number, &kp _symbol, &kp _number)
 
-/ {
-  macros {
-    // This is a helper macro increases the keyboard's backlight intensity, but
-    // it also guarantees that the backlight feature is turned ON before doing
-    // so.
-    bl_inc: backlight_on_and_increase {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&bl BL_ON>, <&bl BL_INC>;
-    };
-  };
-};
 
 // Next are keys I want to modify their standard behavior, like sending an `@`
 // character when pressing the number `9` with a shift modifier, instead of a
@@ -178,13 +166,6 @@
     __NUM_REVERSE(N9, LEFT_PARENTHESIS);
     __NUM_REVERSE(N0, RIGHT_PARENTHESIS);
 
-    // Underglow RESET, that, when double-tapped, zero-out all the underglow
-    // values.
-    DEFINE_DOUBLE_TAP_KEY(ug_reset, &rgb_ug RGB_RESET, &rgb_ug RGB_COLOR_HSB(0, 0, 0))
-
-    // Backlight DECREASE, that, when double-tapped, turn off the keyboard
-    // backlight.
-    DEFINE_DOUBLE_TAP_KEY(bl_dec, &bl BL_DEC, &bl BL_OFF)
 
     // The GLOBE key does not have all the functionalities Apple's version of
     // the key has, so I'm adding a new one to it:

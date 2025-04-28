@@ -11,13 +11,9 @@
 // (https://www.nerdfonts.com).
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
-#include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/rgb.h>
 
 #include "specialkeys.dtsi"
 #include "homerowmods.dtsi"
@@ -418,11 +414,11 @@
     MAIN {
       display-name = "mBAS";
       bindings = <LAYER_ADAPTER(
-        &lbktgrave, &kp_rN1,   &kp_rN2,   &kp_rN3,   &kp_rN4,  &kp_rN5,                               &kp_rN6,       &kp_rN7,   &kp_rN8,   &kp_rN9,   &kp_rN0,    &kp RBKT,
-        &kp TAB,    &kp Q,     &kp W,     &kp E,     &kp R,    &kp T,         &kp LHYP,    &kp RHYP,  &kp Y,         &kp U,     &kp I,     &kp O,     &kp P,      &kp MINUS,
-        &kp GRAVE,  LHM4(A),   LHM3(S),   LHM2(D),   LHM1(F),  &kp G,         &kp LMEH,    &kp RMEH,  &kp H,         RHM1(J),   RHM2(K),   RHM3(L),   RHM4(SEMI), &kp SQT,
-        &globebslh, P_LB4_QWT, P_LB3_QWT, &kp C,     AS(V),    &kp B,         &kp HOME,    &kp PG_UP, &kp N,         &kp M,     &kp COMMA, P_RB3_QWT, P_RB4_QWT,  &hmr GLOBE EQUAL,
-                    &motg_sys, P_SF4_QWT, P_LF3_QWT, &tabnav, &lt L_SYM SPC, &kp END,     &kp PG_DN, &lt L_MED RET, &hlr L_NUM BSPC, P_RF3_QWT, P_SF4_QWT,  &motg_sys
+        &lbktgrave, &kp_rN1,   &kp_rN2,   &kp_rN3,   &kp_rN4,  &kp_rN5,                               &kp_rN6,       &kp_rN7,         &kp_rN8,   &kp_rN9,   &kp_rN0,    &kp RBKT,
+        &kp TAB,    &kp Q,     &kp W,     &kp E,     &kp R,    &kp T,         &kp LHYP,    &kp RHYP,  &kp Y,         &kp U,           &kp I,     &kp O,     &kp P,      &kp MINUS,
+        &kp GRAVE,  LHM4(A),   LHM3(S),   LHM2(D),   LHM1(F),  &kp G,         &kp LMEH,    &kp RMEH,  &kp H,         RHM1(J),         RHM2(K),   RHM3(L),   RHM4(SEMI), &kp SQT,
+        &globebslh, P_LB4_QWT, P_LB3_QWT, &kp C,     &kp V,    &kp B,         &kp HOME,    &kp PG_UP, &kp N,         &kp M,           &kp COMMA, P_RB3_QWT, P_RB4_QWT,  &hmr GLOBE EQUAL,
+                    &motg_sys, P_SF4_QWT, P_LF3_QWT, &tabnav,  &lt L_SYM SPC, &kp END,     &kp PG_DN, &lt L_MED RET, &hlr L_NUM BSPC, P_RF3_QWT, P_SF4_QWT, &motg_sys
       )>;
       sensor-bindings = <&mouscrl SCRLDN SCRLUP &inc_dec_kp C_VOL_UP C_VOL_DN>;
     };
@@ -444,11 +440,11 @@
     COLEMAK {
       display-name = "mCMK";
       bindings = <LAYER_ADAPTER(
-        &lbktgrave, &kp_rN1,   &kp_rN2,   &kp_rN3,   &kp_rN4,   &kp_rN5,                               &kp_rN6,       &kp_rN7,   &kp_rN8,   &kp_rN9,   &kp_rN0,   &kp RBKT,
-        &kp TAB,    &kp Q,     &kp W,     &kp F,     &kp P,     &kp B,         &kp LHYP,    &kp RHYP,  &kp J,         &kp L,     &kp U,     &kp Y,     &kp SEMI,  &kp MINUS,
-        &kp GRAVE,  LHM4(A),   LHM3(R),   LHM2(S),   LHM1(T),   &kp G,         &kp LMEH,    &kp RMEH,  &kp M,         RHM1(N),   RHM2(E),   RHM3(I),   RHM4(O),   &kp SQT,
-        &globebslh, P_LB4_QWT, P_LB3_QWT, &kp C,     &kp D,     &kp V,         &kp HOME,    &kp PG_UP, &kp K,         &kp H,     &kp COMMA, P_RB3_QWT, P_RB4_QWT, &hmr GLOBE EQUAL,
-                    &motg_sys, P_SF4_QWT, P_LF3_QWT, &tabnav,  &lt L_SYM SPC, &kp END,     &kp PG_DN, &lt L_MED RET, &hlr L_NUM BSPC, P_RF3_QWT, P_SF4_QWT, &motg_sys
+        &lbktgrave, &kp_rN1,   &kp_rN2,   &kp_rN3,   &kp_rN4,   &kp_rN5,                               &kp_rN6,       &kp_rN7,         &kp_rN8,   &kp_rN9,   &kp_rN0,   &kp RBKT,
+        &kp TAB,    &kp Q,     &kp W,     &kp F,     &kp P,     &kp B,         &kp LHYP,    &kp RHYP,  &kp J,         &kp L,           &kp U,     &kp Y,     &kp SEMI,  &kp MINUS,
+        &kp GRAVE,  LHM4(A),   LHM3(R),   LHM2(S),   LHM1(T),   &kp G,         &kp LMEH,    &kp RMEH,  &kp M,         RHM1(N),         RHM2(E),   RHM3(I),   RHM4(O),   &kp SQT,
+        &globebslh, P_LB4_QWT, P_LB3_QWT, &kp C,     &kp D,     &kp V,         &kp HOME,    &kp PG_UP, &kp K,         &kp H,           &kp COMMA, P_RB3_QWT, P_RB4_QWT, &hmr GLOBE EQUAL,
+                    &motg_sys, P_SF4_QWT, P_LF3_QWT, &tabnav,   &lt L_SYM SPC, &kp END,     &kp PG_DN, &lt L_MED RET, &hlr L_NUM BSPC, P_RF3_QWT, P_SF4_QWT, &motg_sys
       )>;
       sensor-bindings = <&mouscrl SCRLDN SCRLUP &inc_dec_kp C_VOL_UP C_VOL_DN>;
     };
@@ -496,11 +492,11 @@
     NUM {
       display-name = "mNUM";
       bindings = <LAYER_ADAPTER(
-        &none,        &kp LBKT, &kp STAR, &kp FSLH,  &kp RBKT,    &kp CARET,                          &none, &none,      &none,     &none,     &none,     &none,
-        &kp TAB,      &kp N1,   &kp N2,   &kp N3,    &kp N4,      &kp N5,     &kp LHYP,    &kp RHYP,  &kp N6,   &kp N7,   &kp N8,    &kp N9,      &kp N0,     &none,
-        &kp KP_ENTER, &kp N6,   &kp N7,   &kp N8,    &kp N9,      &kp N0,      &kp LMEH,    &kp RMEH,  &none, &kp RHRM1,  &kp RHRM2, &kp RHRM3, &kp RHRM4, &none,
-        &kp EQUAL,    &kp LPAR, &kp PLUS, &kp MINUS, &kp RPAR,    &kp KP_DOT, &kp HOME,    &kp PG_UP, &none, &none,      &none,     &none,     &none,     &kp GLOBE,
-                      &molock,  &none,    &kp COMMA, &kp_bspcdel, &kp SPACE,  &kp END,     &kp PG_DN, &none, &tog L_NUM, &none,     &none,     &none
+        &none,        &kp LBKT, &kp STAR, &kp FSLH,  &kp RBKT,    &kp CARET,                          &none,  &none,      &none,     &none,     &none,     &none,
+        &kp TAB,      &kp N1,   &kp N2,   &kp N3,    &kp N4,      &kp N5,     &kp LHYP,    &kp RHYP,  &kp N6, &kp N7,     &kp N8,    &kp N9,    &kp N0,    &none,
+        &kp KP_ENTER, &kp N6,   &kp N7,   &kp N8,    &kp N9,      &kp N0,     &kp LMEH,    &kp RMEH,  &none,  &kp RHRM1,  &kp RHRM2, &kp RHRM3, &kp RHRM4, &none,
+        &kp EQUAL,    &kp LPAR, &kp PLUS, &kp MINUS, &kp RPAR,    &kp KP_DOT, &kp HOME,    &kp PG_UP, &none,  &none,      &none,     &none,     &none,     &kp GLOBE,
+                      &molock,  &none,    &kp COMMA, &kp_bspcdel, &kp SPACE,  &kp END,     &kp PG_DN, &none,  &tog L_NUM, &none,     &none,     &none
       )>;
       sensor-bindings = <&mouscrl SCRLDN SCRLUP &inc_dec_kp C_VOL_UP C_VOL_DN>;
     };
@@ -523,7 +519,7 @@
       display-name = "mSYM";
       bindings = <LAYER_ADAPTER(
         &none,     &none,     &none,     &none,     &none,     &none,                              &kp QMARK, &kp PLUS,  &kp MINUS, &kp DOT,  &kp FSLH,  &kp BSLH,
-        &none,     &kp GRAVE,     &kp SQT,     &kp PLUS,  &kp MINUS,     &none,      &kp LHYP,    &kp RHYP,  &kp AMPS,  &kp LT,    &kp EQUAL, &kp GT,   &kp PIPE,  &kp HASH,
+        &none,     &kp GRAVE, &kp SQT,   &kp PLUS,  &kp MINUS, &none,      &kp LHYP,    &kp RHYP,  &kp AMPS,  &kp LT,    &kp EQUAL, &kp GT,   &kp PIPE,  &kp HASH,
         &none,     &kp LHRM4, &kp LHRM3, &kp LHRM2, &kp LHRM1, &none,      &kp LMEH,    &kp RMEH,  &kp LBKT,  &kp LPAR,  &kp COLON, &kp RPAR, &kp RBKT,  &kp PRCNT,
         &kp GLOBE, &none,     &none,     &none,     &none,     &none,      &kp HOME,    &kp PG_UP, &kp DLLR,  &kp LBRC,  &kp STAR,  &kp RBRC, &kp CARET, &kp EXCL,
                    &none,     &none,     &none,     &none,     &tog L_SYM, &kp END,     &kp PG_DN, &kp AT,    &kp SPACE, &none,     &none,    &molock
@@ -548,11 +544,11 @@
     MEDIA {
       display-name = "mMED";
       bindings = <LAYER_ADAPTER(
-        &none,        &none,        &none,      &none,    &none,      &none,                              &none,      &none,     &none,     &none,     &none,     &none,
-        &none, &kp C_BRI_UP, &none,      &none,    &none,      &kp C_VOL_UP,      &kp LHYP,    &kp RHYP,  &none,      &none,     &none,     &none,     &none,     &none,
-        &none, &kp C_BRI_DN, &kp C_PREV, &kp C_PP, &kp C_NEXT, &kp C_VOL_DN,      &kp LMEH,    &kp RMEH,  &none,      &kp RHRM1, &kp RHRM2, &kp RHRM3, &kp RHRM4, &none,
-        &none,   &none,        &none,      &none,    &none,      &kp C_MUTE,      &kp HOME,    &kp PG_UP, &none,      &none,     &none,     &none,     &none,     &kp GLOBE,
-                      &molock,      &none,      &none,    &none,      &kp C_STOP, &kp END,     &kp PG_DN, &tog L_MED, &none,     &none,     &none,     &none
+        &none,  &none,        &none,      &none,    &none,      &none,                                    &none,      &none,     &none,     &none,     &none,     &none,
+        &none,  &kp C_BRI_UP, &none,      &none,    &none,      &kp C_VOL_UP,    &kp LHYP,     &kp RHYP,  &none,      &none,     &none,     &none,     &none,     &none,
+        &none,  &kp C_BRI_DN, &kp C_PREV, &kp C_PP, &kp C_NEXT, &kp C_VOL_DN,    &kp LMEH,     &kp RMEH,  &none,      &kp RHRM1, &kp RHRM2, &kp RHRM3, &kp RHRM4, &none,
+        &none,  &none,        &none,      &none,    &none,      &kp C_MUTE,      &kp HOME,     &kp PG_UP, &none,      &none,     &none,     &none,     &none,     &kp GLOBE,
+                &molock,      &none,      &none,    &none,      &kp C_STOP,      &kp END,      &kp PG_DN, &tog L_MED, &none,     &none,     &none,     &none
       )>;
       sensor-bindings = <&mouscrl SCRLDN SCRLUP &inc_dec_kp C_VOL_UP C_VOL_DN>;
     };
@@ -578,7 +574,7 @@
         &none,     &mkp MB4,  &mkp MB3,  &mkp MB2,  &mkp MB1,  &mkp MB5, &kp LHYP,    &kp RHYP,  &none,     &kp MAC_CUT,   &kp MAC_COPY,  &kp MAC_PASTE, &kp MAC_UNDO,   &none,
         &none,     &kp LHRM4, &kp LHRM3, &kp LHRM2, &kp LHRM1, &none,    &kp LMEH,    &kp RMEH,  &none,     MKP_MOVE_LEFT, MKP_MOVE_DOWN, MKP_MOVE_UP,   MKP_MOVE_RIGHT, &none,
         &kp GLOBE, P_LB4_MOU, P_LB3_MOU, &none,     &none,     &none,    &kp HOME,    &kp PG_UP, &none,     MKP_SCRL_LEFT, MKP_SCRL_DOWN, MKP_SCRL_UP,   MKP_SCRL_RIGHT, &none,
-                   &none,     &none,     P_LF3_MOU, &none,     &none,    &kp END,     &kp PG_DN, &mkp MB2,  &mkp MB1,      &mkp MB3,      &mkp MB4,     &molock
+                   &none,     &none,     P_LF3_MOU, &none,     &none,    &kp END,     &kp PG_DN, &mkp MB2,  &mkp MB1,      &mkp MB3,      &mkp MB4,      &molock
       )>;
       sensor-bindings = <&mouscrl SCRLDN SCRLUP &inc_dec_kp C_VOL_UP C_VOL_DN>;
     };
@@ -600,11 +596,11 @@
     FUNCTIONS {
       display-name = "mFUN";
       bindings = <LAYER_ADAPTER(
-        &none, &none, &none, &none, &kp F19, &kp F20,                         &none, &none,     &none,     &none,     &none,     &none,
-        &none, &kp F1, &kp F2, &kp F2, &kp F4, &kp F5, &kp LHYP,    &kp RHYP,  &kp F6,  &kp F7,  &kp F8,  &kp F9,     &kp F10, &none,
-        &none, &kp F11, &kp F12, &kp F13, &kp F14, &kp F15, &kp LMEH,    &kp RMEH,  &none, &kp RHRM1, &kp RHRM2, &kp RHRM3, &kp RHRM4, &none,
-        &none, &none, &none,  &none, &none, &none,  &kp HOME,    &kp PG_UP, &none, &none,     &none,     P_RB3_FUN, P_RB4_FUN, &kp GLOBE,
-               &molock, &none,   &none,   &none,   &none,   &kp END,     &kp PG_DN, &none, &none,     P_RF3_FUN, &none,     &none
+        &none,   &none,    &none,    &none,    &kp F19,  &kp F20,                           &none,   &none,      &none,      &none,      &none,      &none,
+        &none,   &kp F1,   &kp F2,   &kp F2,   &kp F4,   &kp F5,   &kp LHYP,    &kp RHYP,   &kp F6,  &kp F7,     &kp F8,     &kp F9,     &kp F10,    &none,
+        &none,   &kp F11,  &kp F12,  &kp F13,  &kp F14,  &kp F15,  &kp LMEH,    &kp RMEH,   &none,   &kp RHRM1,  &kp RHRM2,  &kp RHRM3,  &kp RHRM4,  &none,
+        &none,   &none,    &none,    &none,    &none,    &none,    &kp HOME,    &kp PG_UP,  &none,   &none,      &none,      P_RB3_FUN,  P_RB4_FUN,  &kp GLOBE,
+                 &molock,  &none,    &none,    &none,    &none,    &kp END,     &kp PG_DN,  &none,   &none,      P_RF3_FUN,  &none,      &none
       )>;
       sensor-bindings = <&mouscrl SCRLDN SCRLUP &inc_dec_kp C_VOL_UP C_VOL_DN>;
     };
@@ -626,11 +622,11 @@
     BUTTON {
       display-name = "mBTN";
       bindings = <LAYER_ADAPTER(
-        &none,              &kp BTAB,     &kp MAC_FDPRV, &kp MAC_FDNXT, &kp TAB,       &kp MAC_LP,                             &kp MAC_LP,     &kp BTAB,      &kp MAC_FDPRV, &kp MAC_FDNXT, &kp TAB,      &none,
-        &none,              &kp MAC_DKTP, &kp MAC_WINP,  &kp MAC_WINN,  &kp MAC_DKTN,  &kp MAC_APPWIN, &kp LHYP,    &kp RHYP,  &kp MAC_APPWIN, &kp MAC_DKTP,  &kp MAC_WINP,  &kp MAC_WINN,  &kp MAC_DKTN, &kp RG(PLUS),
-        &none,              &kp LHRM4,    &kp LHRM3,     &kp LHRM2,     &kp LHRM1,     &kp MAC_MC,     &kp LMEH,    &kp RMEH,  &kp MAC_MC,     &kp RHRM1,     &kp RHRM2,     &kp RHRM3,     &kp RHRM4,    &kp RG(MINUS),
-        &mt GLOBE MAC_REDO, P_SB4_BUT,    &kp MAC_CUT,   &kp MAC_COPY,  &kp MAC_PASTE, &kp MAC_SP,     &kp HOME,    &kp PG_UP, &kp MAC_SP,     &kp MAC_PASTE, &kp MAC_COPY,  &kp MAC_CUT,   P_SB4_BUT,    &mt GLOBE MAC_REDO,
-                            &molock,      P_SF4_BUT,     &none,         &none,         &none,          &kp END,     &kp PG_DN, &none,          &none,         &none,         P_SF4_BUT,     &molock
+        &none,              &kp BTAB,     &kp MAC_FDPRV, &kp MAC_FDNXT, &kp TAB,       &kp MAC_LP,                               &kp MAC_LP,     &kp BTAB,      &kp MAC_FDPRV, &kp MAC_FDNXT, &kp TAB,      &none,
+        &none,              &kp MAC_DKTP, &kp MAC_WINP,  &kp MAC_WINN,  &kp MAC_DKTN,  &kp MAC_APPWIN, &kp LHYP,      &kp RHYP,  &kp MAC_APPWIN, &kp MAC_DKTP,  &kp MAC_WINP,  &kp MAC_WINN,  &kp MAC_DKTN, &kp RG(PLUS),
+        &none,              &kp LHRM4,    &kp LHRM3,     &kp LHRM2,     &kp LHRM1,     &kp MAC_MC,     &kp LMEH,      &kp RMEH,  &kp MAC_MC,     &kp RHRM1,     &kp RHRM2,     &kp RHRM3,     &kp RHRM4,    &kp RG(MINUS),
+        &mt GLOBE MAC_REDO, P_SB4_BUT,    &kp MAC_CUT,   &kp MAC_COPY,  &kp MAC_PASTE, &kp MAC_SP,     &kp HOME,      &kp PG_UP, &kp MAC_SP,     &kp MAC_PASTE, &kp MAC_COPY,  &kp MAC_CUT,   P_SB4_BUT,    &mt GLOBE MAC_REDO,
+                            &molock,      P_SF4_BUT,     &none,         &none,         &none,          &kp END,       &kp PG_DN, &none,          &none,         &none,         P_SF4_BUT,     &molock
       )>;
       sensor-bindings = <&mouscrl SCRLDN SCRLUP &inc_dec_kp C_VOL_UP C_VOL_DN>;
     };
@@ -652,11 +648,11 @@
     SYSTEM {
       display-name = "mSYS";
       bindings = <LAYER_ADAPTER(
-        &none,       &none,           &none,           &none,           &none,   &none,                                     &none,        &none,        &none,        &none,        &none,         &none,
-        &bootloader, &rgb_ug RGB_HUI, &rgb_ug RGB_SAI, &rgb_ug RGB_BRI, &bl_inc, &ext_power EP_TOG, &kp LHYP,    &kp RHYP,  &none,        &none,        &none,        &none,        &none,         &bootloader,
-        &sys_reset,  &rgb_ug RGB_HUD, &rgb_ug RGB_SAD, &rgb_ug RGB_BRD, &bl_dec, &out OUT_TOG,      &kp LMEH,    &kp RMEH,  &none,        &none,        &none,        &none,        &none,         &sys_reset,
-        &none,       &rgb_ug RGB_TOG, &ug_reset,       &none,           &none,   &kp C_PWR,         &kp HOME,    &kp PG_UP, &bt BT_SEL 0, &bt BT_SEL 1, &bt BT_SEL 2, &bt BT_SEL 3, &bt BT_SEL 4,  &bt BT_CLR,
-                     LOCK_SYS_LAYER,  &none,           &none,           &none,   &tog L_CMK,        &kp END,     &kp PG_DN, &none,        &none,        &none,        &none,        LOCK_SYS_LAYER
+        &none,       &none,           &none,      &none,      &none,     &none,                                  &none,        &none,        &none,        &none,        &none,         &none,
+        &bootloader, &none,           &none,      &none,      &none,     &none,      &kp LHYP,        &kp RHYP,  &none,        &none,        &none,        &none,        &none,         &bootloader,
+        &sys_reset,  &none,           &none,      &none,      &none,     &none,      &kp LMEH,        &kp RMEH,  &none,        &none,        &none,        &none,        &none,         &sys_reset,
+        &none,       &none,           &none,      &none,      &none,     &none,      &kp HOME,        &kp PG_UP, &bt BT_SEL 0, &bt BT_SEL 1, &bt BT_SEL 2, &bt BT_SEL 3, &bt BT_SEL 4,  &bt BT_CLR,
+                     LOCK_SYS_LAYER,  &none,      &none,      &none,     &none,      &kp END,         &kp PG_DN, &none,        &none,        &none,        &none,        LOCK_SYS_LAYER
       )>;
       sensor-bindings = <&mouscrl SCRLDN SCRLUP &inc_dec_kp C_VOL_UP C_VOL_DN>;
     };
